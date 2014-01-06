@@ -3,19 +3,55 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The big featured header on the homepage, with the site logo and description }}
-<header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="vertical">
-        <div class="site-head-content" class="inner">
 
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
+<header>
+    <div id="printLogo">
+    </div>
+    <div id="header">
+        <div id="logo">
+			{{#if @blog.logo}}<a class="blog-logo" href="http://www.novanet.no" title="Til startsiden"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
         </div>
     </div>
-</header>
+    <div class="mainMenu">
+        <ul>
+            <li class="first">
+                <a href="http://www.novanet.no/menneskene/">Menneskene</a>
+            </li>
 
-{{! The main content area on the homepage }}
+            <li>
+                <a href="http://www.novanet.no/handtverket/">H&aring;ndverket</a>
+            </li>
+
+            <li>
+                <a href="http://www.novanet.no/tjenester/">Tjenester</a>
+            </li>
+
+            <li>
+                <a href="http://www.novanet.no/karriere/">Karriere</a>
+            </li>
+
+            <li>
+                <a href="http://www.novanet.no/om-oss/">Om oss</a>
+            </li>
+
+            <li>
+                <a href="http://www.novanet.no/nyheter/">Nyheter</a>
+            </li>
+
+            <li class="last active">
+                <a href="/">Novanet Blog</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div id="breadCrumb">
+<span>Du er her:</span>
+    <ul>
+    <li><a href="http://www.novanet.no">Startside</a> &gt;</li>
+    <li>Novanet Blog</li>
+    </ul>
+</div>
+    {{! The main content area on the homepage }}
 <main class="content" role="main">
 
     {{! Each post will be output using this markup }}

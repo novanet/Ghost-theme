@@ -89,12 +89,14 @@ html {
 }
 
 body {
+    padding: 26px 40px 0 40px;
+    overflow: visible;
     height: 100%;
     max-height: 100%;
-    font-family: 'Noto Serif', serif;
-    font-size: 2.0rem;
-    line-height: 1.6em;
-    color: #3A4145;
+    font-family: Century Gothic, Verdana, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.7em;
+    color: #42464B;
 }
 
 ::-moz-selection {
@@ -145,15 +147,6 @@ h5 {
 
 h6 {
     font-size: 2rem;
-}
-
-a {
-    color: #4a4a4a;
-    transition: color ease 0.3s;
-}
-
-a:hover {
-    color: #57A3E8;
 }
 
 h1 a, h2 a, h3 a,
@@ -383,7 +376,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img {
-    display: block;
+    /*display: block;*/
     max-height: 100px;
     width: auto;
     margin: 0 auto;
@@ -511,6 +504,128 @@ margin on the iframe, cause it breaks stuff. */
     display: block;
     font-size: 1.4rem;
     line-height: 1.5em;
+}
+
+/* ==========================================================================
+   4A. Main theme - stuff copied from old Novanet blog
+   ========================================================================== */
+div.mainMenu {
+float: left;
+display: block;
+width: 1220px;
+clear: both;
+margin: 17px 0 0px 0px;
+padding: 1px 0 0 0;
+list-style: none;
+background: url(../images/bg_dotted_line.gif) repeat-x top left;
+font-size: 1.4em;
+}
+
+div#header {
+text-align: left;
+}
+
+div.mainMenu ul {
+    margin:0px;
+    padding:0px 0;
+    list-style:none;
+    float:left;
+    display:block;
+    width:1220px;
+
+}
+
+div.mainMenu ul li {
+    display:block;
+    display:inline;
+    float:left;
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    font-weight:bold;
+    background:transparent url(../images/bg_gt_grey.gif) no-repeat 0px 10px;
+}
+
+div.mainMenu ul li.active {
+    Background:transparent url(../images/bg_gt_green.gif) no-repeat 0px 10px;
+}
+
+/* 
+---------------------------------------------------------------------------------------------
+LINK STYLES 
+---------------------------------------------------------------------------------------------
+*/
+/*a:link,a:visited, a:active {
+    color:#95A7B5;
+    text-decoration:underline;
+}*/
+
+a {
+    color:#95A7B5;
+    transition: color ease 0.3s;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+.mainMenu ul li a, .horizontal_subMenu ul li a:link, .mainMenu ul li a:visited {
+    color: #42464B; 
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 1.6em 0 0;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+}
+
+.mainMenu ul li.first a:hover {
+    text-decoration: none;
+    background: #EAEBEB;
+}
+
+.mainMenu ul li a:hover {
+    text-decoration: none;  
+    background: #EAEBEB;
+}
+
+.mainMenu ul li a:active {
+    text-decoration:none;
+}
+
+.mainMenu ul li.active a, .mainMenu ul li.active a:link, .mainMenu ul li.active a:visited {
+    color:#42464B;
+    text-decoration:none;
+}
+
+.mainMenu ul li.active a:hover {
+    text-decoration:none;
+}
+
+.mainMenu ul li.active a:active {
+    text-decoration:none;
+}
+
+div#breadCrumb ul li a, div#breadCrumb ul li a:link, div#breadCrumb ul li a:visited, div#breadCrumb ul li a:active{
+    padding:0 0.4em;
+}
+
+div#breadCrumb {
+    width: 1220px;
+    font-size: 1.2em;
+    padding: 0 0 10px 0;
+    text-align: left;
+}
+
+div#breadCrumb ul{
+    margin:0;
+    padding:0;
+    display:inline;
+}
+
+div#breadCrumb ul li{
+    display:inline;
+    margin:0;
+    padding:0;
+    color:#42464B;
 }
 
 /* ==========================================================================
