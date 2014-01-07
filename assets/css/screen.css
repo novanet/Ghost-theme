@@ -94,7 +94,7 @@ body {
     height: 100%;
     max-height: 100%;
     font-family: Century Gothic, Verdana, Arial, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.7em;
     color: #42464B;
 }
@@ -225,7 +225,7 @@ mark {
 code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 1.1em;
+    font-size: 1.5rem;
     white-space: pre-wrap;
     border: 1px solid #E3EDF3;
     background: #F7FAFB;
@@ -240,7 +240,7 @@ pre {
     width: 100%;
     padding: 10px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 1.15em;
+    font-size: 1.5rem;
     white-space: pre;
     overflow: auto;
     background: #F7FAFB;
@@ -518,7 +518,7 @@ margin: 17px 0 0px 0px;
 padding: 1px 0 0 0;
 list-style: none;
 background: url(../images/bg_dotted_line.gif) repeat-x top left;
-font-size: 1.4em;
+font-size: 1.2rem;
 }
 
 div#header {
@@ -610,7 +610,7 @@ div#breadCrumb ul li a, div#breadCrumb ul li a:link, div#breadCrumb ul li a:visi
 
 div#breadCrumb {
     width: 1220px;
-    font-size: 1.2em;
+    font-size: 0.9rem;
     padding: 0 0 10px 0;
     text-align: left;
 }
