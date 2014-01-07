@@ -225,7 +225,7 @@ mark {
 code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.85em;
+    font-size: 1.1em;
     white-space: pre-wrap;
     border: 1px solid #E3EDF3;
     background: #F7FAFB;
@@ -240,7 +240,7 @@ pre {
     width: 100%;
     padding: 10px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.9em;
+    font-size: 1.15em;
     white-space: pre;
     overflow: auto;
     background: #F7FAFB;
@@ -442,7 +442,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-excerpt p {
     margin: 1.6rem 0 0 0;
-    font-size: 0.9em;
+    font-size: 1.1em;
     line-height: 1.6em;
 }
 
