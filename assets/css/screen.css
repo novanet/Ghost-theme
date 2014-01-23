@@ -663,6 +663,26 @@ div#breadCrumb ul li{
     height: auto;
 }
 
+.post-related{
+    position:relative;
+    margin:4rem 0 0 0 ;
+    padding: 1rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
+
+.post-related ul {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.post-related ul li{
+    width:50%;
+    float: left;
+    padding: 0;
+    margin: 0;  
+}
+
 /* The author credit area after the post */
 .post-footer {
     position: relative;
