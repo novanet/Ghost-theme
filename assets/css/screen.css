@@ -89,7 +89,7 @@ html {
 }
 
 body {
-    padding: 26px 40px 0 40px;
+    padding: 0;
     overflow: visible;
     height: 100%;
     max-height: 100%;
@@ -103,6 +103,108 @@ body {
     color: #222;
     background: #D6EDFF;
     text-shadow: none;
+}
+
+header.main{
+    position: relative;
+    margin:  0 0  1rem 0;
+    padding: 0 4rem;
+    border-bottom: #EBF2F6 1px solid;
+    color: #333;
+    background: #F7FAFB;
+}
+
+header.main .heading{
+    position:relative;
+    float:left;
+    word-break: break-word;
+    width: 80%;
+    max-width: 700px;
+    margin: 3rem auto 2rem auto;
+    left:0;
+    right:0;
+}
+
+header.main .logo{     
+    position:relative;
+    float:left;
+    width: 20%;
+    max-width: 700px;
+    margin: 4rem auto;
+}
+
+
+section.post-header {
+    position:relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+
+}
+
+section.post-header .author{
+
+}
+
+section.post-header .author .avatar{
+    float:left;
+    border: #EBF2F6 1px solid;
+    color: #333;
+    padding: 0.6rem 0.6rem 0rem 0.6rem;
+
+    background: #F7FAFB;
+}
+
+section.post-header .author .avatar img{
+    padding:0;
+    margin:0;
+    line-height:1em;
+}
+
+
+section.post-header .author .name{
+   font-size:2.5rem;
+  float:left;
+ margin-left:2rem;
+ line-height:60px;   
+}
+
+article.post header{
+    margin-top : -4rem;
+}
+
+
+section.post-header .post-meta{
+float:right;
+text-align: right;
+}
+
+@media only screen and (max-width: 900px){
+    header.main .heading{
+        position:relative;
+        clear:both;
+        width:100%;
+        margin: 1.5rem auto;
+        left:auto;
+        right:auto;
+    }
+    header.main .logo{
+        width:100%;
+        clear:both;
+        text-align:center;
+        margin: 2rem auto;
+    }
+}
+
+.tag
+{
+    padding:0.5rem;
+    border-radius:5px;
+    background-color: #EBF2F6;
+}
+
+.tags{
+    margin-top:0.4rem;
 }
 
 ::selection {
@@ -646,8 +748,7 @@ div#breadCrumb ul li{
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
-    padding: 60px 0;
-    text-align: center;
+    
 }
 
 .post-template .blog-title {
@@ -959,7 +1060,7 @@ div#breadCrumb ul li{
     }
 
     h1 {
-        font-size: 4.8rem;
+        font-size: 4.2rem;
         text-indent: -2px;
     }
 

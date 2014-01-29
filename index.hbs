@@ -4,14 +4,20 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 
-<header>
+<header class="main">
     <div id="printLogo">
     </div>
-    <div id="header">
-        <div id="logo">
-			{{#if @blog.logo}}<a class="blog-logo" href="http://www.novanet.no" title="Til startsiden"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+     <div class="logo">
+            <a id="blog-logo" href="{{@blog.url}}">
+                {{#if @blog.logo}}
+                    <img src="{{@blog.logo}}" alt="Blog Logo" />
+                {{else}}
+                    <span class="blog-title">{{@blog.title}}</span>
+                {{/if}}
+            </a>
         </div>
-    </div>
+        <div style="clear:both"></div>
+
 </header>
     {{! The main content area on the homepage }}
 <main class="content" role="main">
