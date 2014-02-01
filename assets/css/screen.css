@@ -115,7 +115,7 @@ header.main{
 }
 
 header.main .heading{
-    position:absolute;
+    position:relative;
     float:left;
     word-break: break-word;
     width: 80%;
