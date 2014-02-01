@@ -115,7 +115,7 @@ header.main{
 }
 
 header.main .heading{
-    position:relative;
+    position:absolute;
     float:left;
     word-break: break-word;
     width: 80%;
@@ -169,30 +169,92 @@ section.post-header .author .name{
  line-height:40px;   
 }
 
+.content.blog-list
+{
+    padding-top:2rem;
+}
+
 article.post header{
     margin-top : -4rem;
 }
 
 
-section.post-header .post-meta{
+header.post-header .post-meta, section.post-header .post-meta{
 float:right;
 text-align: right;
 }
 
-@media only screen and (max-width: 900px){
+header.post-header .author{
+
+    float:left;
+}
+
+header.post-header .avatar img{
+    padding:0;
+    margin:0;
+    font-size:0.1em;
+    line-height:0.2em;
+    height:3.5rem;
+    display:block;
+}
+
+
+.blog-list article.post header{
+    margin-top : auto;
+}
+
+
+
+header.post-header .avatar{
+    border: #EBF2F6 1px solid;
+    color: #333;
+    padding: 0.3rem;
+
+    background: #F7FAFB;
+    position:relative;
+    float:left;
+    margin-right:10px;
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 1080px){
+    header.post-header .avatar{
+/*        display:none;*/
+    }
+    header.main{
+        position:auto;
+        margin: auto;
+        padding: auto;
+        overflow: auto;
+        text-align: center;
+    }
     header.main .heading{
         position:relative;
         clear:both;
-        width:100%;
         margin: 1.5rem auto;
         left:auto;
         right:auto;
+        float:none;
+        max-width:1080px;
     }
     header.main .logo{
+        float: none;
+        max-width:1080px;
+        margin: 1.5rem auto;
+    }
+
+    header.main .logo img{
+        height:4rem;
+    }
+    .post-header .post-meta {
         width:100%;
-        clear:both;
-        text-align:center;
-        margin: 2rem auto;
+    }
+    .post-header .post-meta time{
+        float:right;
+    }
+
+    .post-header  .post-meta .tags{
+        float:left;
     }
 }
 
