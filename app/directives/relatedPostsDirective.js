@@ -13,7 +13,8 @@ function RelatedPostsDirective($http){
 		link: function(scope, element, attrs){
 			scope.relatedPosts = [];
 			var posts = [];
-			$http({ url: '/ghost/api/v0.1/posts?tags='+scope.tags, method: 'GET'})
+			var encodedTags = encodeURIComponent(scope.tags);
+			$http({ url: '/ghost/api/v0.1/posts?tags='+encodedTags, method: 'GET'})
 				.then(function(res){
 					for (var i = res.data.posts.length - 1; i >= 0; i--) {
 						var post = res.data.posts[i];
@@ -22,9 +23,9 @@ function RelatedPostsDirective($http){
 					};
 					scope.relatedPosts = posts;
 				});
-			
+
 		}
 	}
-		
-	
+
+
 }
