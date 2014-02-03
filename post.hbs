@@ -37,13 +37,13 @@
         </a>
     </div>
     {{/if}}
-    
+
     </span>
     </div>
 
 
    <div class="post-meta">
-        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> 
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
         <div class="tags">
             {{#each tags}}
                 <span class="tag">{{name}}</span>
@@ -51,26 +51,26 @@
         </div>
     </div>
 
-    <div style="clear:both"></div>            
+    <div style="clear:both"></div>
 
     </section>
-   
+
 <main class="content" role="main">
 
     <article class="{{post_class}}">
 
         {{! Everything below outputs content of the the post which has been published }}
-        
+
 
         <section class="post-content">
             {{content}}
         </section>
-        
+
             <related-posts slug="{{slug}}" tags="{{tags}}"></related-posts>
-            
+            <posts-by-user slug="{{slug}}" user="{{created_by}}" name="{{author.name}}"></posts-by-user>
         <footer class="post-footer">
 
-            
+
 
             <section class="share">
                 <h4>Share this post</h4>
@@ -93,7 +93,7 @@
     </article>
 
 
-		
+
 <script type="text/javascript">
     var disqus_shortname = 'novanet-blog'; // required: replace example with your forum shortname
     var disqus_identifier = '{{post.id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
