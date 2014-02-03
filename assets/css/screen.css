@@ -112,22 +112,24 @@ header.main{
     border-bottom: #EBF2F6 1px solid;
     color: #333;
     background: #F7FAFB;
+    min-height: 130px;
 }
 
 header.main .heading{
     position:relative;
-    float:left;
+    /*float:left;*/
     word-break: break-word;
     width: 80%;
     max-width: 700px;
-    margin: 3rem auto 2rem auto;
+    margin: 0 auto 2rem auto;
+    padding-top: 2rem;    
     left:0;
     right:0;
 }
 
 header.main .logo{     
-    position:relative;
-    float:left;
+    position:absolute;
+    /*float:left;*/
     width: 20%;
     max-width: 700px;
     margin: 4rem auto;
@@ -239,6 +241,7 @@ header.post-header .avatar{
     }
     header.main .logo{
         float: none;
+        position:relative;
         max-width:1080px;
         margin: 1.5rem auto;
     }
