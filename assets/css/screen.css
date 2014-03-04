@@ -893,6 +893,7 @@ div#breadCrumb ul li{
     top: 4rem;
     right: 0;
     width: 140px;
+    text-align: right;
 }
 
 .post-footer .share a {
