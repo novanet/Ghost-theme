@@ -7,7 +7,7 @@
 
     {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
@@ -20,6 +20,36 @@
 	<link href="/assets/css/prism.css" rel="stylesheet"></link>
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+
+    {{#post}}
+        <meta name="keywords" content="{{tags}}" />
+
+    <!-- Google Authorship and Publisher Markup -->
+        <meta name="description" content="{{@blog.title}} - {{title}}" />
+
+        {{#if author.googlePlus}}
+        <!-- Schema.org markup for Google+ -->
+        <link rel="publisher" href="https://plus.google.com/101758255142291588121/posts"
+        <meta itemprop="name" content="{{@blog.title}} - {{title}}">
+        <meta itemprop="description" content="{{@blog.description}}">
+        <meta itemprop="image" content="{{author.image}}">
+        {{/if}}
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="{{author.image}}">
+        <meta name="twitter:site" content="@novanetas"> 
+        <meta name="twitter:title" content="{{@blog.title}} - {{title}}">
+        <meta name="twitter:creator" content="{{author.location}}">
+
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="{{title}}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{@blog.url}}/{{slug}}" />
+        <meta property="og:image" content="{{author.image}}" />
+        <meta property="og:description" content="{{@blog.description}}" />
+        <meta property="og:site_name" content="{{@blog.title}}" />
+    {{/post}}
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
     <script type="text/javascript" src="/app/ghost.js"></script>
