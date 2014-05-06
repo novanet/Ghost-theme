@@ -46,7 +46,7 @@
         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
         <div class="tags">
             {{#each tags}}
-                <span class="tag">{{name}}</span>
+                <a href="/?tags={{name}}"><span class="tag">{{name}}</span></a>
             {{/each}}
         </div>
     </div>
