@@ -133,8 +133,12 @@ header.main .logo{
     width: 20%;
     max-width: 700px;
     margin: 4rem auto;
+    max-height: 100px;
 }
 
+header.main .logo img{
+    height: 70px;
+} 
 
 section.post-header {
     position:relative;
