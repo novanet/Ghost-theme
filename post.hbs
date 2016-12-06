@@ -3,75 +3,60 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
 
-        {{! Each post has the blog logo at the top, with a link back to the home page }}
-        <header  class="main">
-        <div class="logo">
-            <a id="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    <span class="blog-title">{{@blog.title}}</span>
-                {{/if}}
-            </a>
-        </div>
-            <div class="heading"><h1 class="post-title">{{{title}}}</h1><div style="clear:both"></div>
-            </div>
-            <div style="clear:both"></div>
-        </header>
- <section class="post-header">
-    <div class="author">
-    {{#if author.image}}
-        <div class="avatar"><img src="{{author.image}}" /></div>
-    {{/if}}
-    <span class="name">{{author.name}}
-{{#if author.website}}
-    <br />
-    <div class="googlePlus">
-    <!-- Place this code where you want the badge to render. -->
-        <a href="{{author.website}}"
-           rel="author" target="_top" style="text-decoration:none;">
-        <img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/>
+{{! Each post has the blog logo at the top, with a link back to the home page }}
+<header  class="main">
+    <div class="logo">
+        <a id="blog-logo" href="{{@blog.url}}">
+            {{#if @blog.logo}}
+                <img src="{{@blog.logo}}" alt="Blog Logo" />
+            {{else}}
+                <span class="blog-title">{{@blog.title}}</span>
+            {{/if}}
         </a>
     </div>
-    {{/if}}
-
-    </span>
+    <div class="heading">
+        <h1 class="post-title">{{{title}}}</h1>
+        <div style="clear:both"></div>
     </div>
-
-
-   <div class="post-meta">
+    <div style="clear:both"></div>
+</header>
+<section class="post-header">
+    <div class="author">
+        {{#if author.image}}
+        <div class="avatar"><img src="{{author.image}}" /></div>
+        {{/if}}
+        <span class="name">{{author.name}}
+            {{#if author.twitter}}
+            <br />
+            <a href="{{twitter_url author.twitter}}" rel="author" target="_blank" style="text-decoration:none;">
+                <span class="twitter icon-twitter"></span>
+            </a>
+            {{/if}}
+        </span>
+    </div>
+    <div class="post-meta">
         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
         <div class="tags">
             {{#each tags}}
-                <a href="/?tags={{name}}"><span class="tag">{{name}}</span></a>
+                <a href="/tag/{{name}}"><span class="tag">{{name}}</span></a>
             {{/each}}
         </div>
     </div>
-
     <div style="clear:both"></div>
-
-    </section>
+</section>
 
 <main class="content" role="main">
-
     <article class="{{post_class}}">
-
         {{! Everything below outputs content of the the post which has been published }}
-
-
         <section class="post-content">
             {{content}}
         </section>
-
-            <related-posts slug="{{slug}}" tags="{{tags}}"></related-posts>
-            <posts-by-user slug="{{slug}}" user="{{created_by}}" name="{{author.name}}"></posts-by-user>
+        <related-posts slug="{{slug}}" tags="{{tags}}"></related-posts>
+        <posts-by-user slug="{{slug}}" user="{{created_by}}" name="{{author.name}}"></posts-by-user>
         <footer class="post-footer">
-
-
-
             <section class="share">
                 <h4>Share this post</h4>
                 <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
@@ -87,27 +72,22 @@
                     <span class="hidden">Google+</span>
                 </a>
             </section>
-
         </footer>
         <div id="disqus_thread"></div>
     </article>
 
+    <script type="text/javascript">
+        var disqus_shortname = 'novanet-blog'; // required: replace example with your forum shortname
+        var disqus_identifier = '{{post.id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
 
-
-<script type="text/javascript">
-    var disqus_shortname = 'novanet-blog'; // required: replace example with your forum shortname
-    var disqus_identifier = '{{post.id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </main>
-        {{/post}}
+{{/post}}
