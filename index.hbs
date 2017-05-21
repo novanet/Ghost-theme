@@ -24,33 +24,32 @@
 
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
-
     <article class="{{post_class}}">
         <header class="post-header">
-         {{#if author.image}}
+            {{#if author.image}}
             <div class="avatar"><img src="{{author.image}}" /></div>
-        {{/if}}
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+            {{/if}}
+            <h2 class="post-title">
+                <a href="{{url}}">{{{title}}}</a>
+            </h2>
             
-                    <div class="author">
-            <span class="name">{{author.name}}
-        </span></div>
-        <div class="post-meta">
-        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> 
-        <div class="tags">
-            {{#each tags}}
-                <a href="/tag/{{name}}"><span class="tag">{{name}}</span></a>
-            {{/each}}
-        </div>
-
-    </div>
-<div style="clear:both;"></div>
+            <div class="author">
+                <a href="/author/{{author.slug}}"><span class="name">{{author.name}}</span></a>
+            </div>
+            <div class="post-meta">
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> 
+                <div class="tags">
+                    {{#each tags}}
+                    <a href="/tag/{{name}}"><span class="tag">{{name}}</span></a>
+                    {{/each}}
+                </div>
+            </div>
+        <div style="clear:both;"></div>
         </header>
         <section class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
         </section>
     </article>
-
     {{/foreach}}
 
     {{!! After all the posts, we have the previous/next pagination links }}
