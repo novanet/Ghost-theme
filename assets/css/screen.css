@@ -194,6 +194,7 @@ section.post-header .post-meta {
 
 header.post-header .author {
     float: left;
+    margin-top: 0.5rem;
 }
 
 header.post-header .avatar img {
@@ -261,13 +262,17 @@ header.post-header .avatar {
 }
 
 .tag {
-    padding: 0.5rem;
+    padding: 0.25rem 0.75rem;
     border-radius: 5px;
     background-color: #EBF2F6;
 }
 
 .tags {
     margin-top: 0.4rem;
+}
+
+.blog-list .tags {
+    margin-top: 0;
 }
 
 ::selection {

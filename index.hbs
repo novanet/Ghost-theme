@@ -34,10 +34,10 @@
             </h2>
             
             <div class="author">
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> by 
                 <a href="/author/{{author.slug}}"><span class="name">{{author.name}}</span></a>
             </div>
             <div class="post-meta">
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> 
                 <div class="tags">
                     {{#each tags}}
                     <a href="/tag/{{name}}"><span class="tag">{{name}}</span></a>
