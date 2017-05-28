@@ -1,8 +1,6 @@
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
-
-
 /*
 
     0.  Includes
@@ -19,12 +17,11 @@
 
  */
 
-
 /* ==========================================================================
    0. Includes - Ground zero
    ========================================================================== */
 
-@import url(normalize.css);
+@import url(normalize.min.css);
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -722,52 +719,6 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 1.4rem;
     line-height: 1.5em;
 }
-
-
-/* ==========================================================================
-   4A. Main theme - stuff copied from old Novanet blog
-   ========================================================================== */
-
-div.mainMenu {
-    float: left;
-    display: block;
-    width: 1220px;
-    clear: both;
-    margin: 17px 0 0px 0px;
-    padding: 1px 0 0 0;
-    list-style: none;
-    background: url(../images/bg_dotted_line.gif) repeat-x top left;
-    font-size: 1.2rem;
-}
-
-div#header {
-    text-align: left;
-}
-
-div.mainMenu ul {
-    margin: 0px;
-    padding: 0px 0;
-    list-style: none;
-    float: left;
-    display: block;
-    width: 1220px;
-}
-
-div.mainMenu ul li {
-    display: block;
-    display: inline;
-    float: left;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-    background: transparent url(../images/bg_gt_grey.gif) no-repeat 0px 10px;
-}
-
-div.mainMenu ul li.active {
-    Background: transparent url(../images/bg_gt_green.gif) no-repeat 0px 10px;
-}
-
 
 /* 
 ---------------------------------------------------------------------------------------------
