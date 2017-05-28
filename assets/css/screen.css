@@ -146,7 +146,7 @@ header.main .logo {
 }
 
 header.main .logo img {
-    height: 70px;
+    height: 5rem;
 }
 
 section.post-header {
@@ -176,10 +176,6 @@ section.post-header .author .name {
     float: left;
     margin-left: 2rem;
     line-height: 40px;
-}
-
-.content.blog-list {
-    padding-top: 2rem;
 }
 
 article.post header {
@@ -231,6 +227,7 @@ header.post-header .avatar {
         padding: auto;
         overflow: auto;
         text-align: center;
+        min-height: 0;
     }
     header.main .heading {
         position: relative;
@@ -245,7 +242,7 @@ header.post-header .avatar {
         float: none;
         position: relative;
         max-width: 1080px;
-        margin: 1.5rem auto;
+        margin: 1.5rem auto 0.8rem auto;
     }
     header.main .logo img {
         height: 4rem;
