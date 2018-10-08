@@ -28,7 +28,8 @@
         {{#if author.profile_image}}
         <div class="avatar"><img src="{{author.profile_image}}" /></div>
         {{/if}}
-        <span class="name">{{author.name}}
+        <span class="name big-name">
+            <a href="/author/{{author.slug}}">{{author.name}}</a>
             {{#if author.twitter}}
             <br />
             <a href="{{twitter_url author.twitter}}" rel="author" target="_blank" style="text-decoration:none;">

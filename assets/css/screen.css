@@ -175,6 +175,11 @@ section.post-header .author .name {
     line-height: 40px;
 }
 
+section.post-header .author .big-name a {
+    text-decoration:none; 
+    color: #42464B;
+}
+
 article.post header {
     margin-top: -4rem;
 }
