@@ -1,41 +1,65 @@
 {{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+<header class="site-header">
+    <div class="outer site-nav-main">
+        <div class="inner">
+            {{> "site-nav"}}
+        </div>
+    </div>
+</header>
 
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
 
-        {{! Each post has the blog logo at the top, with a link back to the home page }}
-        <header>
-            <a id="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </a>
-        </header>
-<main class="content" role="main">
+<main id="site-main" class="site-main outer">
+    <div class="inner">
 
-    <article class="{{post_class}}">
-<header class="post-header">
-    header
-    </header>
+        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
+            <header class="post-full-header">
+                <h1 class="post-full-title">{{title}}</h1>
+            </header>
 
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+            {{#if feature_image}}
+            <figure class="post-full-image">
+                {{!-- This is a responsive image, it loads different sizes depending on device
+                https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+                <img
+                    srcset="{{img_url feature_image size="s"}} 300w,
+                            {{img_url feature_image size="m"}} 600w,
+                            {{img_url feature_image size="l"}} 1000w,
+                            {{img_url feature_image size="xl"}} 2000w"
+                    sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 1170px,
+                            2000px"
+                    src="{{img_url feature_image size="xl"}}"
+                    alt="{{title}}"
+                />
+            </figure>
+            {{/if}}
 
-        {{! Everything below outputs content of the the post which has been published }}
-        
+            <section class="post-full-content">
+                <div class="post-content">
+                    {{content}}
+                </div>
+            </section>
 
-        <h1 class="post-title">{{{title}}}</h1>
+        </article>
 
-        <section class="post-content">
-            {{content}}
-        </section>
-
-        {{/post}}
-
-    </article>
-
+    </div>
 </main>
+
+{{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+    $(function() {
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+    });
+</script>
+{{/contentFor}}
