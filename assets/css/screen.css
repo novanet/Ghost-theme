@@ -113,8 +113,8 @@ body {
     position: relative;
     margin-top: 64px;
     padding-bottom: 12px;
-    color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
+    color: #000;
+    background: #F7FAFB no-repeat center center;
     background-size: cover;
 }
 
@@ -127,7 +127,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    background: #F7FAFB;
 }
 
 .site-header-background:after {
@@ -139,8 +139,8 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    height: 140px;
-    background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0));
+    height: 140px;    
+    background: #F7FAFB;
 }
 
 .site-header-background.no-image:before,
@@ -271,7 +271,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color(var(--darkgrey) l(-5%));
+    background: #F7FAFB;
 }
 
 .site-nav {
@@ -304,7 +304,7 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%);
+    background: #F7FAFB;
 }
 
 .site-nav-left {
@@ -496,7 +496,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link svg {
     height: 1.8rem;
-    fill: #fff;
+    fill: #000;
 }
 
 .social-link-fb svg {
@@ -508,7 +508,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .social-link-wb svg path {
-    stroke: #fff;
+    stroke: #000;
 }
 
 .social-link-rss svg {

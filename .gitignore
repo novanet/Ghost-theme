@@ -11,6 +11,9 @@ pids
 logs
 results
 
+/dist
+/assets/built
+
 npm-debug.log
 node_modules
 
