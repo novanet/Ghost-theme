@@ -13,6 +13,7 @@ results
 
 /dist
 /assets/built
+/.vs
 
 npm-debug.log
 node_modules

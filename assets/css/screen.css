@@ -342,7 +342,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     flex-shrink: 0;
     display: inline-block;
     margin-right: 32px;
-    padding: 12px 0;
+    padding: 8px 0;
     color: #fff;
     font-size: 1.7rem;
     line-height: 1.8rem;
@@ -358,7 +358,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 21px;
+    height: 35px;
 }
 
 .site-home-header .site-nav-logo {
@@ -616,6 +616,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background-size: cover;
 }
 
+.post-card-tags{
+    padding-top: 1vh;
+}
+
 .post-card-image-link {
     position: relative;
     display: block;
@@ -660,6 +664,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+    color: #9EABB3;
 }
 
 .post-card-title {
@@ -934,11 +939,16 @@ make sure this only happens on large viewports / desktop-ish devices.
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: var(--midgrey);
+    color: #9eabb3;
     font-size: 1.3rem;
     line-height: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.post-full-tags a {
+    color: #9eabb3;
+    margin-right: 10px;
 }
 
 .post-full-meta-date {
